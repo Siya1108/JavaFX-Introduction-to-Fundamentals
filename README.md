@@ -12,6 +12,6 @@ Unix/MacOsX:
 `./mvnw clean javafx:run`
 
 Windows:  
-`mvnw.cmd clean javafx:run`
+`.\mvnw.cmd clean javafx:run`
 
 You will find the instructions on the SOFTENG 206 website.
