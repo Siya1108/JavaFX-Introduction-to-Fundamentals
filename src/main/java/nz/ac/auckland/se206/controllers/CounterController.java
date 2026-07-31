@@ -44,7 +44,13 @@ public class CounterController {
 
     @FXML
     private void switchToMusicPlayer(ActionEvent event) {
-        System.out.println(event.getSource().getClass());
-        System.out.println(event.getSource());
+        Button button = (Button) event.getSource();
+        Scene sceneButtonIsIn = button.getScene();
+
+        try {
+            sceneButtonIsIn.setRoot(App.loadFXML("musicplayer"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
