@@ -29,6 +29,7 @@ public class MusicPlayerController {
     private void playSong(String songFileName) {
         if (mediaPlayer != null) {
         mediaPlayer.stop();
+        mediaPlayer.dispose();
         }
     
         Media media = new Media(getClass().getResource("/sounds/" + songFileName).toExternalForm());
@@ -41,7 +42,6 @@ public class MusicPlayerController {
 
     if (mediaPlayer != null) {
       mediaPlayer.stop();
-      mediaPlayer.dispose();
     }
 
     Button button = (Button) event.getSource();
