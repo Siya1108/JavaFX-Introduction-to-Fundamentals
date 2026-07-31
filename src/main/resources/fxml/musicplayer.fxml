@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.MusicPlayerController">
+   <children>
+      <Button fx:id="firstButton" layoutX="128.0" layoutY="201.0" mnemonicParsing="false" onAction="#playFirstSong" text="Play First Song" textAlignment="CENTER" />
+      <Button fx:id="secondButton" layoutX="388.0" layoutY="201.0" mnemonicParsing="false" onAction="#playSecondSong" text="Play Second Song" textAlignment="CENTER" />
+      <Button fx:id="switchButton" layoutX="463.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToCounter" text="Switch To Counter" textAlignment="CENTER" />
+   </children>
+</Pane>
