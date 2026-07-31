@@ -1,7 +1,6 @@
 package nz.ac.auckland.se206;
 
 import java.util.HashMap;
-import java.util.Map;
 import javafx.scene.Parent;
 
 public class SceneManager {
