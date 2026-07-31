@@ -52,7 +52,7 @@ public class CounterController {
 
   @FXML
   private void initialize() {
-    // Initialization code for the music player scene
-    System.out.println("*** Initializing Music Controller *** " + this);
+    // Initialization code for the counter scene
+    System.out.println("*** Initializing Counter *** " + this);
   }
 }

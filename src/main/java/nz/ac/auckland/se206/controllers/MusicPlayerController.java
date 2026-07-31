@@ -5,26 +5,44 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import nz.ac.auckland.se206.App;
 import javafx.event.ActionEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class MusicPlayerController {
   @FXML private Button firstButton;
   @FXML private Button secondButton;
   @FXML private Button switchButton;
 
+  private MediaPlayer mediaPlayer;
+
   @FXML
-  private void handleFirstButtonClick() {
-    // Handle first button click event, play sound1
-
-
+  private void playFirstSong() {
+    playSong("sound1.mp3");
   }
 
   @FXML
-  private void handleSecondButtonClick() {
-    // Handle second button click event
+  private void playSecondSong() {
+    playSong("sound2.mp3");
   }
+
+    private void playSong(String songFileName) {
+        if (mediaPlayer != null) {
+        mediaPlayer.stop();
+        }
+    
+        Media media = new Media(getClass().getResource("/sounds/" + songFileName).toExternalForm());
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.play();
+    }
 
   @FXML
   private void switchToCounter(ActionEvent event) {
+
+    if (mediaPlayer != null) {
+      mediaPlayer.stop();
+      mediaPlayer.dispose();
+    }
+
     Button button = (Button) event.getSource();
     Scene sceneButtonIsIn = button.getScene();
 
