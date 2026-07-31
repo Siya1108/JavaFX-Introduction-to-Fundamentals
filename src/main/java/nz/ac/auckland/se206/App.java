@@ -21,7 +21,11 @@ public class App extends Application {
 
   @Override
   public void start(Stage stage) throws IOException {
-    scene = new Scene(loadFXML("counter"), 640, 480);
+
+    SceneManager.addUi(SceneManager.AppUi.MUSIC_PLAYER, loadFXML("musicplayer"));
+    SceneManager.addUi(SceneManager.AppUi.COUNTER, loadFXML("counter"));
+
+    scene = new Scene(SceneManager.getUiRoot(SceneManager.AppUi.MUSIC_PLAYER), 640, 480);
     stage.setScene(scene);
     stage.show();
   }

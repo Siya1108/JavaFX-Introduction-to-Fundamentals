@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import nz.ac.auckland.se206.App;
+import nz.ac.auckland.se206.SceneManager;
 
 public class CounterController {
   private int count = 0;
@@ -42,6 +43,7 @@ public class CounterController {
   private void switchToMusicPlayer(ActionEvent event) {
     Button button = (Button) event.getSource();
     Scene sceneButtonIsIn = button.getScene();
+    sceneButtonIsIn.setRoot(SceneManager.getUiRoot(SceneManager.AppUi.MUSIC_PLAYER));
 
     try {
       sceneButtonIsIn.setRoot(App.loadFXML("musicplayer"));

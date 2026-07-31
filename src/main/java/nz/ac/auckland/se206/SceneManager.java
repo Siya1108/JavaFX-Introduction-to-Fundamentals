@@ -17,7 +17,7 @@ public class SceneManager {
         sceneMap.put(appUi, uiRoot);
     }
 
-    public static Parent getUi(AppUi appUi) {
+    public static Parent getUiRoot(AppUi appUi) {
         return sceneMap.get(appUi);
     }
 
